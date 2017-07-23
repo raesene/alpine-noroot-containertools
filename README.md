@@ -9,12 +9,14 @@ Based on alpine to keep the image nice and small.
 
 Tools installed
 --
-openssh
-nmap
-curl
-etcd
-kubectl
-docker client
+- openssh
+- nmap
+- curl
+- etcd
+- kubectl
+- docker client
+- boltbrowser
+- oc
 
 
 Running Instructions
