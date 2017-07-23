@@ -9,7 +9,6 @@ Based on alpine to keep the image nice and small.
 
 Tools installed
 --
-- openssh
 - nmap
 - curl
 - etcd
