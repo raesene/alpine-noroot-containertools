@@ -24,6 +24,10 @@ chmod +x /usr/local/bin/oc && rm -rf openshift-origin-client-tools-v1.5.1-7b451f
 #Copy the bolt browser binary in.
 COPY boltbrowser /usr/local/bin
 
+#Get AmIcontained
+RUN curl -OL https://github.com/jessfraz/amicontained/releases/download/v0.0.8/amicontained-linux-amd64 && \
+cp amicontained-linux-amd64 /usr/local/bin/amicontained && chmod +x /usr/local/bin/amicontained
+
 #lets set some capabilities
 RUN setcap cap_net_raw+ep /bin/busybox 
 RUN setcap cap_net_raw+ep /usr/bin/nmap
