@@ -20,6 +20,4 @@ Tools installed
 
 Running Instructions
 --
-`docker run -t -d -p 2200:22 raesene/alpine-noroot-containertools`
-
-`docker exec -it <container_name> /bin/sh`
+`docker run -it raesene/alpine-noroot-containertools /bin/sh`
