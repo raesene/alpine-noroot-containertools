@@ -16,6 +16,7 @@ Tools installed
 - docker client
 - boltbrowser
 - oc
+- amicontained
 
 
 Running Instructions
