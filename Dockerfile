@@ -43,3 +43,5 @@ WORKDIR /home/tester
 
 
 USER tester
+
+CMD ["/bin/sh"]
