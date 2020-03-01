@@ -92,6 +92,7 @@ RUN mkdir manifests
 COPY --chown=tester /manifests/* /home/tester/manifests/
 
 
-
+# This is a Dumb Hack
+CMD ["tail", "-f" , "/dev/null"]
 
 
