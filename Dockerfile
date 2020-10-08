@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.12
 
 RUN apk --update add nmap nmap-scripts curl tcpdump bind-tools jq nmap-ncat libcap && \
 rm -rf /var/cache/apk/*
