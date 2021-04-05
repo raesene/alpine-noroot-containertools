@@ -72,6 +72,9 @@ chmod +x /usr/local/bin/oc && rm -rf openshift-origin-client-tools-v3.10.0-dd10d
 
 COPY /bin/conmachi /usr/local/bin/
 
+#Having a setuid shell could be handy
+RUN cp /bin/bash /bin/setuidbash && chmod 4755 /bin/setuidbash
+
 #Create a group for our user
 RUN addgroup -g 1001 -S tester
 
