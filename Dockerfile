@@ -46,8 +46,8 @@ RUN curl -LO https://github.com/corneliusweig/rakkess/releases/download/v0.4.4/r
 RUN curl -OL https://github.com/aquasecurity/kubectl-who-can/releases/download/v0.1.0/kubectl-who-can_linux_x86_64.tar.gz && \
 tar -xzvf kubectl-who-can_linux_x86_64.tar.gz && cp kubectl-who-can /usr/local/bin && rm -f kubectl-who-can_linux_x86_64.tar.gz
 
-#Get Kube-Hunter
-RUN pip3 install kube-hunter
+#Get Kube-Hunter (removed for now as it was breaking the build)
+#RUN pip3 install kube-hunter
 
 #Get Helm2
 RUN curl -OL https://storage.googleapis.com/kubernetes-helm/helm-v2.13.1-linux-amd64.tar.gz && \
