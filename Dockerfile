@@ -2,7 +2,7 @@ FROM alpine:3.14
 
 RUN apk --update add python3 py3-netifaces py3-prettytable py3-certifi \
 py3-chardet py3-future py3-idna py3-netaddr py3-parsing py3-six\
- nmap nmap-scripts curl tcpdump bind-tools jq nmap-ncat bash && \
+ nmap nmap-scripts curl tcpdump bind-tools jq nmap-ncat bash libcap libcap-ng-utils && \
 rm -rf /var/cache/apk/*
 
 #Kubernetes 1.12 for old clusters
