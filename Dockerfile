@@ -76,6 +76,9 @@ COPY /bin/conmachi /usr/local/bin/
 #Having a setuid shell could be handy
 RUN cp /bin/bash /bin/setuidbash && chmod 4755 /bin/setuidbash
 
+#Set Capabilities on busybox
+RUN setcap 'cap_net_raw,cap_net_bind_service,cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_sys_chroot,cap_mknod,cap_audit_write,cap_setfcap=+ep' /bin/busybox
+
 #Create a group for our user
 RUN addgroup -g 1001 -S tester
 
