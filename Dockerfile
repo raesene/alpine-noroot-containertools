@@ -40,11 +40,11 @@ mv reg-linux-amd64 /usr/local/bin/reg && chmod +x /usr/local/bin/reg
 
 #Get Rakkess
 RUN curl -LO https://github.com/corneliusweig/rakkess/releases/download/v0.4.4/rakkess-amd64-linux.tar.gz && \
- tar -xzvf rakkess-amd64-linux.tar.gz && chmod +x rakkess-amd64-linux && mv rakkess-amd64-linux /usr/local/bin/rakkess
+ tar -xzvf rakkess-amd64-linux.tar.gz && chmod +x rakkess-amd64-linux && mv rakkess-amd64-linux /usr/local/bin/rakkess && rm -f rakkess-amd64-linux.tar.gz
 
 #Get kubectl-who-can
 RUN curl -OL https://github.com/aquasecurity/kubectl-who-can/releases/download/v0.1.0/kubectl-who-can_linux_x86_64.tar.gz && \
-tar -xzvf kubectl-who-can_linux_x86_64.tar.gz && cp kubectl-who-can /usr/local/bin && rm -f kubectl-who-can_linux_x86_64.tar.gz
+tar -xzvf kubectl-who-can_linux_x86_64.tar.gz && mv kubectl-who-can /usr/local/bin && rm -f kubectl-who-can_linux_x86_64.tar.gz
 
 #Get Helm3
 RUN curl -OL https://get.helm.sh/helm-v3.7.0-linux-amd64.tar.gz && \
@@ -60,7 +60,7 @@ rm -f go-pillage-registries_1.0_Linux_x86_64.tar.gz
 #Get oc
 RUN curl -OL https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz && \
 tar -xzvf openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz && cp openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit/oc /usr/local/bin && \
-chmod +x /usr/local/bin/oc && rm -rf openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz && rm -f openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz
+chmod +x /usr/local/bin/oc && rm -rf openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit && rm -f openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz
 
 #Get rbac-tool
 RUN curl -OL https://github.com/alcideio/rbac-tool/releases/download/v1.4.0/rbac-tool_v1.4.0_linux_amd64.tar.gz && \
@@ -68,7 +68,7 @@ tar -xzvf rbac-tool_v1.4.0_linux_amd64.tar.gz && mv rbac-tool /usr/local/bin && 
 rm -f rbac-tool_v1.4.0_linux_amd64.tar.gz LICENSE README.md
 
 #Get kdigger
-RUN curl -OL https://github.com/quarkslab/kdigger/releases/download/v1.0.0/kdigger-linux-amd64 && \
+RUN curl -OL https://github.com/quarkslab/kdigger/releases/download/v1.4.0/kdigger-linux-amd64 && \
 mv kdigger-linux-amd64 /usr/local/bin/kdigger && chmod +x /usr/local/bin/kdigger
 
 COPY /bin/conmachi /usr/local/bin/
